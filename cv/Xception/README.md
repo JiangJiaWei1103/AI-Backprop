@@ -20,6 +20,7 @@ Contributor: JiaWei Jiang <br>
 | ----------------- | ---------------------------- | ----------------------------------------------------------- |
 | Ordering of convs | Pointwise then depthwise     | Depthwise then pointwise                                    |
 | Non-linearity     | ReLU after both convs        | Usually without non-linearities btw depthwise and pointwise |
+
 [![Screenshot-2024-04-28-at-8-53-40-PM.png](https://i.postimg.cc/WpyR5ZM2/Screenshot-2024-04-28-at-8-53-40-PM.png)](https://postimg.cc/RqwbFNs8)
 
 > It may be that **the depth of the intermediate feature spaces** on which spatial convolutions are applied is critical to the usefulness of the non-linearity.
@@ -28,4 +29,3 @@ Note that Inception modules map cross-channel correlation first, which can creat
 ## Terminologies
 * Spatially separable convolution
 * Transformation-invariant scattering
-* 
