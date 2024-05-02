@@ -26,6 +26,22 @@ Contributor: JiaWei Jiang <br>
 > It may be that **the depth of the intermediate feature spaces** on which spatial convolutions are applied is critical to the usefulness of the non-linearity.
 
 Note that Inception modules map cross-channel correlation first, which can create deep latent feature spaces.
+
+## Quick Experiments
+* Dataset: `torchvision.datasets.MNIST`
+* Data transformation: 
+```python
+transform = transforms.Compose([
+    transforms.Resize((299, 299)),
+    transforms.ToTensor(),
+])
+```
+* Model: [Xception](https://github.com/JiangJiaWei1103/DL-Playground/tree/main/cv/Xception/xception.py)
+    * `in_channels=1`
+* Evaluation: Official train/test splitting (no cross-validation)
+* Training: `ep1_bs32_adam_lr1e-3` w/o lr scheduler
+* Accuracy: 97.47%
+
 ## Terminologies
 * Spatially separable convolution
 * Transformation-invariant scattering
