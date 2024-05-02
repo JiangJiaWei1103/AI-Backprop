@@ -30,6 +30,14 @@ As illustrated above, introducing 1x1 convolutions for dimension reduction can h
 * 1x1 before 3x3: $[(1 \times 1) \times 192 + 1] \times 64 + [(3 \times 3) \times 64 + 1] \times 128 = 86208$
 ### Why can auxiliary classifiers provide additional regularization?
 
+## Quick Experiments
+* Dataset: `torchvision.datasets.MNIST`
+* Data preprocessing: `transforms.Resize((224, 224))`
+* Model: [GoogLeNet](https://github.com/JiangJiaWei1103/DL-Playground/blob/main/cv/GoogLeNet/inception_v1.py) w/ `in_channels=1`
+* Evaluation: Official train/test splitting (no cross-validation)
+* Training: `ep1_bs32_adam_lr1e-3` w/o lr scheduler
+* Accuracy: 96.75%
+
 ## Terminologies
 * Hebbian principle
 * Sparse structure approximation ([Arora et al.](https://arxiv.org/pdf/1310.6343))
