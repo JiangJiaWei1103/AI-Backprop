@@ -33,7 +33,9 @@ As illustrated above, introducing 1x1 convolutions for dimension reduction can h
 ## Quick Experiments
 * Dataset: `torchvision.datasets.MNIST`
 * Data preprocessing: `transforms.Resize((224, 224))`
-* Model: [GoogLeNet](https://github.com/JiangJiaWei1103/DL-Playground/blob/main/cv/GoogLeNet/inception_v1.py) w/ `in_channels=1`
+* Model: [GoogLeNet](https://github.com/JiangJiaWei1103/DL-Playground/blob/main/cv/GoogLeNet/inception_v1.py)
+    * `in_channels=1`
+    * Remove `LocalResponseNorm` in `in_conv`
 * Evaluation: Official train/test splitting (no cross-validation)
 * Training: `ep1_bs32_adam_lr1e-3` w/o lr scheduler
 * Accuracy: 96.75%
