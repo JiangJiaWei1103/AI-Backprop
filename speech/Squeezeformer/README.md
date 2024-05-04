@@ -1,7 +1,8 @@
 # Squeezeformer: An Efficient Transformer for Automatic Speech Recognition (Kim et al., 2022)
 Contributor: JiaWei Jiang <br>
 [[paper](https://proceedings.neurips.cc/paper_files/paper/2022/file/3ccf6da39eeb8fefc8bbb1b0124adbd1-Paper-Conference.pdf)]
-<br>
+
+## Background
 Conformer architecture ([Gultai et al.](https://arxiv.org/pdf/2005.08100)) has become the *de facto* backbone for several downstream speech tasks, which can simultaneously capture local and global context from audio signals by its proposed **convolution-augmented** Transformer architecture.
 ## Challenges
 * MHA mechanism suffers from **quadratic** complexity, limiting model efficiency especially on long sequence.
