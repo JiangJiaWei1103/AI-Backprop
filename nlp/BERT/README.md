@@ -40,13 +40,13 @@ Language model **pre-training** has become an integral part for many successful 
 
 * BERT is pre-trained on BooksCorpus and English Wikipedia with two unsupervised tasks:
     * Masked LM (MLM)
-        * Mask $15%$ of all WordPiece tokens in each sequence at random.
+        * Mask $15$% of all WordPiece tokens in each sequence at random.
         * Mitigate the mismatch between pre-training and fine-tuning because `[MASK]` is absent during fine-tuning.
-            * Assign `[MASK]` $80%$ of the time.
-            * Replace with a random token $10%$ of the time.
-            * Remain unchanged $10%$ of the time.
+            * Assign `[MASK]` $80$% of the time.
+            * Replace with a random token $10$% of the time.
+            * Remain unchanged $10$% of the time.
     * Next Sentence Prediction (NSP)
-        * Choose a sentence pair `(A, B)` in which `B` is the actual next sentence following `A` $50%$ of the time.
+        * Choose a sentence pair `(A, B)` in which `B` is the actual next sentence following `A` $50$% of the time.
 
 * BERT can be fine-tuned on many downstream tasks involving single text or text pairs.
     * Plug in the task specific inputs and outputs (e.g., classification head).
