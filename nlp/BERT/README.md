@@ -22,16 +22,16 @@ Language model **pre-training** has become an integral part for many successful 
 
 ## Methodology
 
-![](https://github.com/JiangJiaWei1103/AI-Backprop/tree/main/assets/bert_fig1.png)
+![](../../assets/bert_fig1.png)
 
 * The model architecture is a multi-layer bidirectional Transformer **encoder** based on [Vaswani et al.](https://arxiv.org/abs/1706.03762).
     * There are two model sizes:
         * <strong>BERT<sub>BASE</sub></strong>: Parameter count 110M, 12 layers, 768 hidden size, 12 heads. Aligned with OpenAI GPT ([Radford et al., 2018](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)).
         * <strong>BERT<sub>LARGE</sub></strong>: Parameter count 340M, 24 layers, 1024 hidden size, 16 heads.
 
-![](https://github.com/JiangJiaWei1103/AI-Backprop/tree/main/assets/bert_emb_ids.png)
+<img src="../../assets/bert_emb_ids.png" width="550" height="250" />
 
-![](https://github.com/JiangJiaWei1103/AI-Backprop/tree/main/assets/bert_fig2.png)
+![](../../assets/bert_fig2.png)
 
 * The input representation is constructed by summing the following three **learnable** embeddings:
     * Token embeddings (WordPiece)
